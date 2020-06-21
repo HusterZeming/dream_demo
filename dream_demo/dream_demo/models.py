@@ -21,3 +21,12 @@ class  Dream(db.Model):   #建立模型 文章
     isPublic = db.Column(db.Boolean)
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))    #外键
     user = db.relationship('User', backref='dreams')   #关联 用户
+
+
+class  Like(db.Model):   #建立模型 文章
+    __tablename__="likes"    #数据库表名
+    like_id = db.Column(db.Integer,primary_key=True)    #主键 自增
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))    #外键
+    dream_id = db.Column(db.Integer, db.ForeignKey("dreams.dream_id"))    #外键
+    user = db.relationship('User', backref='likes')   #关联 用户
+    dream = db.relationship('Dream', backref='likes')   #关联 梦想

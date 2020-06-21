@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dream_demo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="476">
+              <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -25,7 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dream_demo/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="241">
+              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -50,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dream_demo/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="226">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -85,16 +86,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dream_demo/__init__.py" />
-        <option value="$PROJECT_DIR$/dream_demo/models.py" />
         <option value="$PROJECT_DIR$/dream_demo/forms.py" />
         <option value="$PROJECT_DIR$/dream_demo/config.py" />
         <option value="$PROJECT_DIR$/dream_demo/auth.py" />
+        <option value="$PROJECT_DIR$/dream_demo/__init__.py" />
         <option value="$PROJECT_DIR$/dream_demo/routes.py" />
+        <option value="$PROJECT_DIR$/dream_demo/models.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-102" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -203,7 +204,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" id="运行" order="7" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="运行" order="7" weight="0.33333334" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3280142" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -216,18 +217,22 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dream_demo/models.py">
+    <entry file="file://$PROJECT_DIR$/dream_demo/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="17">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dream_demo/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dream_demo/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dream_demo/config.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -236,26 +241,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dream_demo/__init__.py">
+    <entry file="file://$PROJECT_DIR$/dream_demo/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dream_demo/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="476">
+          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dream_demo/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dream_demo/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="241">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

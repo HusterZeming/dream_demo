@@ -22,9 +22,15 @@ def jwt_query_params_auth():
 def dream_list():
     dreams = db.session.query(Dream).filter(Dream.isPublic == 1, Dream.deadline > Dream.now_time).all()
     random.shuffle(dreams)   #随机出现
+    user_id = g.info['user.id']
     dream_list = {"code": 0, "data": []}
     index = 0
     for dream in dreams:
+        likes = db.session.query(Like).filter(Like.dream_id == dream.dream_id, Like.user_id == user_id).first()
+        if likes:
+            isLike = 1
+        elif likes == None:
+            isLike = 0
         time_demo = time.localtime(dream.now_time)
         now_time = time.strftime('%Y-%m-%d %H:%M:%S', time_demo)
         data = {
@@ -32,7 +38,8 @@ def dream_list():
             "name": dream.user.name,
             "text": dream.text,  # 愿望内容
             "time": now_time,  # 发布时间
-            "like_count": dream.like_count  # 点赞数
+            "like_count": dream.like_count,# 点赞数
+            "isLike": isLike,
         }
         dream_list['data'].insert(index, data)
         index += 1
@@ -42,10 +49,20 @@ def dream_list():
 @app.route("/like",methods=['POST'])   #点赞
 def like():
     dream_id = request.args.get('dream_id')   #存储http请求中的输入
-    dream = db.session.query(Dream).filter(Dream.dream_id == dream_id).first()
-    dream.like_count +=1
-    db.session.commit()   #提交到数据库
-    return jsonify("点赞成功")
+    user_id = g.info['user.id']
+    likes = db.session.query(Like).filter(Like.dream_id == dream_id, Like.user_id == user_id).first()
+    if likes:
+        return jsonify("已点过赞")
+    elif likes == None:
+        new_like = Like(dream_id = dream_id, user_id = user_id)
+        new_like.dream = db.session.query(Dream).filter(Dream.dream_id == dream_id).first()
+        new_like.user = db.session.query(User).filter(User.user_id == user_id).first()
+        db.session.add(new_like)  # 加入数据库
+        db.session.commit()   #提交到数据库
+        dream = db.session.query(Dream).filter(Dream.dream_id == dream_id).first()
+        dream.like_count += 1
+        db.session.commit()  # 提交到数据库
+        return jsonify("点赞成功")
 
 
 @app.route("/post",methods=['POST'])   #发表梦想
@@ -126,6 +143,9 @@ def personal_list():
 def delete():
     dream_id = request.args.get('dream_id')
     dream = db.session.query(Dream).filter(Dream.dream_id == dream_id).first()
+    likes = db.session.query(Like).filter(Like.dream_id == dream_id).all()
+    for like in likes:
+        db.session.delete(like)
     db.session.delete(dream)   #从数据库中将文章删除
     db.session.commit()   #提交到数据库
     return jsonify("删除成功")
